@@ -58,7 +58,7 @@ There are four steps followed in the architecture:
 <mark>Clone the github repository into the system</mark><br>
   <p>
     
-   ```git clone https://github.com/Speedster-95/Aelouss.git```<br>
+   ```git clone https://github.com/Speedster-95/Image_Similarity_Python-Open_CV```<br>
    
    and download the dataset from the link https://drive.google.com/drive/folders/1VMAFykUwnxyvCyNqgKDRkG05IAtMayPi?usp=sharing and keep inside the Image_Similarity.
     
