@@ -60,7 +60,7 @@ There are four steps followed in the architecture:
     
    ```git clone https://github.com/Speedster-95/Aelouss.git```<br>
    
-   Unzip the folder assets folder
+   and download the dataset from the link https://drive.google.com/drive/folders/1VMAFykUwnxyvCyNqgKDRkG05IAtMayPi?usp=sharing
     
 </p><br>
 
