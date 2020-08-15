@@ -85,10 +85,10 @@ There are four steps followed in the architecture:
   ```python index.py --dataset dataset --index index.csv```
   
 </p><br> 
-<p>Give the path for the csv file and the path of the dataset.</p>
+<p>Give the path for the csv file and the path of the dataset and the number of images you wanna visualize.</p>
 <p>
   
-  ``` python search.py --index index.csv --query queries/111.png --result-path dataset```
+  ``` python search.py --index index.csv --query queries/4460.jpg --Number-of-images 10  --result-path dataset```
   
 </p><br>  
 
