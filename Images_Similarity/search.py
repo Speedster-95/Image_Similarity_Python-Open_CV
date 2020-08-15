@@ -13,6 +13,8 @@ ap.add_argument("-i", "--index", required = True,
 	help = "Path to where the computed index will be stored")
 ap.add_argument("-q", "--query", required = True,
 	help = "Path to the query image")
+ap.add_argument("-n", "--Number-of-images", required = True,
+	help = "Number of images to fetch")
 ap.add_argument("-r", "--result-path", required = True,
 	help = "Path to the result path")
 args = vars(ap.parse_args())
@@ -22,13 +24,15 @@ cd = ColorDescriptor((8, 12, 3))
 
 # load the query image and describe it
 query = cv2.imread(args["query"])
-print(query.shape)
+print "Shape of the Image:",query.shape
 if query.shape==(512,512,3):
 	features = cd.describe(query)
-
+	n = args["Number_of_images"]
+	print "Number of images to be fetched:",n
 	# perform the search
 	searcher = Searcher(args["index"])
-	results = searcher.search(features)
+	print'Please wait for the results.'
+	results = searcher.search(features,n)
 
 	# display the query
 	cv2.imshow("Query", query)
@@ -38,6 +42,7 @@ if query.shape==(512,512,3):
 		# load the result image and display it
 		result = cv2.imread(args["result_path"] + "/" + resultID)
 		cv2.imshow("Result", result)
+		#cv2.imwrite(result)
 		cv2.waitKey(0)
 else:
 	print('Please Give an image size of 512x512')
